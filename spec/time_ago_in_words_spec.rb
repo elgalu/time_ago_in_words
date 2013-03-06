@@ -16,11 +16,11 @@ describe TimeAgoInWords do
       it "returns empty string on future dates" do
         (Time.now + 1.6).ago_in_words.should == ''
         (Time.now + 100).ago_in_words.should == ''
-        (Time.now + 100_000).ago_in_words.should == ''
+        (Time.now + 9999).ago_in_words.should == ''
       end
 
       it "returns 'a very very long time ago' when more than 250 years ago" do
-        (Time.now - 60*60*24*100_001).ago_in_words.should == 'a very very long time ago'
+        Time.local(1700,01,01).ago_in_words.should == 'a very very long time ago'
       end
 
       it "can handle many days ago" do
