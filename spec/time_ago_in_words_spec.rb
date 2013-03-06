@@ -24,7 +24,7 @@ describe TimeAgoInWords do
       end
 
       it "can handle many days ago" do
-        (Time.now - 60*60*24*99_999).ago_in_words.should == '99999 days ago'
+        (Time.now - 60*60*24*9999).ago_in_words.should == '9999 days ago'
       end
 
       it "returns N seconds ago, N seconds ago!" do
