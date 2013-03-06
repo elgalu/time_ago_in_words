@@ -1,4 +1,4 @@
-## [In git](https://github.com/elgalu/time_ago_in_words/compare/v0.0.2...HEAD)
+## [In git](https://github.com/elgalu/time_ago_in_words/compare/v0.1.0...HEAD)
 
 ### New Features
 * n/a
@@ -9,7 +9,7 @@
 ### Chores
 * n/a
 
-## [v0.0.2](https://github.com/elgalu/time_ago_in_words/tree/v0.0.2)
+## [v0.1.0](https://github.com/elgalu/time_ago_in_words/tree/v0.1.0)
 
 ### New Features
 * n/a
