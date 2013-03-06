@@ -19,7 +19,6 @@ Humanize elapsed time from some Time instance to Time.now, e.g. '2 hours and 1 m
 Just `require 'time_ago_in_words'` and then call Time#ago_in_words method:
 
 ```ruby
-require 'rubygems' # if ruby 1.8.7
 require 'time_ago_in_words'
 
 # Comparing from now:
