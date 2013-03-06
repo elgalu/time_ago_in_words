@@ -15,4 +15,3 @@
 
 ### Features:
 * Humanize elapsed time from some Time instance to Time.now, e.g. '2 hours and 1 minute ago' (Leo Gallucci)
-* TODO: Add more features (Leo Gallucci)

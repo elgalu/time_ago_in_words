@@ -1,5 +1,3 @@
 require 'time_ago_in_words/version'
-
-module TimeAgoInWords
-  # Your code goes here...
-end
+require 'time_ago_in_words/methods'
+require 'time_ago_in_words/core_ext/time'
