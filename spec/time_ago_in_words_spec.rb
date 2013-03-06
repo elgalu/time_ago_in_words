@@ -19,8 +19,8 @@ describe TimeAgoInWords do
         (Time.now + 9999).ago_in_words.should == ''
       end
 
-      it "returns 'a very very long time ago' when more than 250 years ago" do
-        Time.local(1700,01,01).ago_in_words.should == 'a very very long time ago'
+      it "returns 'a very very long time ago' when more than 300 years ago" do
+        Time.local(1713,01,01).ago_in_words.should == 'a very very long time ago'
       end
 
       it "can handle many days ago" do

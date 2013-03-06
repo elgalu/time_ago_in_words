@@ -15,7 +15,7 @@
 * n/a
 
 ### Bugfixes
-* Fixed ruby 1.8.7 issue with dates too old. (Leo Gallucci)
+* Removed support for ruby 1.8.7 due to 'time ouf of range' errors. (Leo Gallucci)
 
 ### Chores
 * Applied Extract Method refactor on Time#ago_in_words(). (Leo Gallucci)
