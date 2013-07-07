@@ -5,10 +5,81 @@
 [![Dependency Status][DS img]][Dependency Status]
 [![Code Climate][CC img]][Code Climate]
 [![Coverage Status][CS img]][Coverage Status]
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/3fe2425a26ab0ca00b5bc6acf817af59 "githalytics.com")](http://githalytics.com/elgalu/time_ago_in_words)
+
+## Warning
+
+This is just a proof-of-concept gem. Please review the following production-ready suggestions i have for you:
+
+### Rails apps
+
+You can use classic Rails time ago in words
+
+```ruby
+time_ago_in_words(Time.now - 60*60*2) + ' ago'
+#=> "about 2 hours ago"
+
+# Note that all these returns the same
+distance_of_time_in_words(Time.now, 15.seconds.from_now, include_seconds: true)
+distance_of_time_in_words(Time.now, 15.seconds.ago, include_seconds: true)
+time_ago_in_words(15.seconds.from_now, include_seconds: true)
+#=> "less than 20 seconds"
+```
+
+For localization or changing the words to be used, look at [this file](https://github.com/rails/rails/blob/master/actionview/lib/action_view/locale/en.yml)
+
+### Non-Rails apps
+
+Same as before but you will need some explicit requires:
+
+```ruby
+require 'action_view'
+require 'action_view/helpers'
+include ActionView::Helpers::DateHelper
+time_ago_in_words(Time.now - 60*60*2) + ' ago'
+#=> "about 2 hours ago"
+
+# If you need to take advantage of Numeric ActiveSupport extensions:
+require 'active_support/core_ext/numeric/time'
+time_ago_in_words(Time.now - 2.hours) + ' ago'
+#=> "about 2 hours ago"
+# note that (Time.now - 2.hours) == (2.hours.ago)
+```
+
+### Web apps, client side:
+
+If you are programming for the web and don't want to mess your caching strategies then client-side update libraries came to your rescue:
+
+| Name           | jQuery library     | jQuery + Rails integration |
+|:-------------- |:------------------:|:--------------------------:|
+| Smart Time Ago | [smart-time-ago][] | [timeago-rails][]          |
+| Timeago        | [jquery-timeago][] | [rails-timeago][]          |
+
+[smart-time-ago]: https://github.com/pragmaticly/smart-time-ago
+[jquery-timeago]: https://github.com/rmm5t/jquery-timeago
+[timeago-rails]: https://github.com/ashchan/timeago-rails
+[rails-timeago]: https://github.com/jgraichen/rails-timeago
+
+### [dotiw](https://github.com/radar/dotiw)
+
+If you are looking for results that looks like this
+
+        "1 year, 2 months, 4 hours, 5 minutes, and 6 seconds"
+
+### Related: Natural Language Date Parser
+
+If you are working in the opposite direction [chronic](https://github.com/mojombo/chronic) natural language date parsing to the rescue.
+
+```ruby
+require 'chronic' #gem install chronic
+Chronic.parse("1 year from now").year #=> 2014
+```
 
 ## Description
 
 Humanize elapsed time from some Time instance to Time.now, e.g. '2 hours and 1 minute ago'
+
+This gem provides slightly different approach to the others but still needs some work to be production-ready, check [TODO](#todo) section.
 
 ## Installation
 
