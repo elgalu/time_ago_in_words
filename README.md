@@ -1,5 +1,18 @@
 # TimeAgoInWords
 
+# Estructura de directorios
+
+| Dir Name   | OSS? | Backup?      | Description                                                                   |
+|:---------- |:----:|:------------:|:-----------------------------------------------------------------------------:|
+| clones     | yes  | github/other | `Git clones` de codigo de otros, e.g. shapado/shapado
+| gems       | yes  | github/other | `Git clones` de gemas de otros, e.g. rails/rails
+| elgalu     | yes  | github/other | elgalu public repos, mostly: github.com/elgalu
+| code       | no   | Dropbox      | elgalu private sample code, snippets, reusable parts, WIP, e.g. jruby tray_app
+| apps       | no   | bitbucket    | elgalu private code gone online and/or in public web, e.g. rubywebs.com
+| testcode   | no   | none         | Dummy improvised ugly disposable code
+
+OSS = Open Source software
+
 [![Gem Version][GV img]][Gem Version]
 [![Build Status][BS img]][Build Status]
 [![Dependency Status][DS img]][Dependency Status]
