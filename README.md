@@ -68,12 +68,14 @@ If you are looking for results that looks like this
 
 ### Related: Natural Language Date Parser
 
-If you are working in the opposite direction [chronic](https://github.com/mojombo/chronic) natural language date parsing to the rescue.
+If you are working in the opposite direction [chronic][] natural language date parsing to the rescue.
 
 ```ruby
 require 'chronic' #gem install chronic
 Chronic.parse("1 year from now").year #=> 2014
 ```
+
+The Javascript version of [chronic][] is [date][] and can be used within your browser (client-side) or nodejs (server-side).
 
 ## Description
 
@@ -165,3 +167,6 @@ Released under the MIT License. See the [LICENSE][] file for further details.
 [CS img]: https://coveralls.io/repos/elgalu/time_ago_in_words/badge.png?branch=master
 
 [time_ago_in_words]: http://apidock.com/rails/ActionView/Helpers/DateHelper/time_ago_in_words
+
+[chronic]: https://github.com/mojombo/chronic
+[date]: https://github.com/matthewmueller/date
