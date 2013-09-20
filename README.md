@@ -65,6 +65,16 @@ If you are programming for the web and don't want to mess your caching strategie
 If you are looking for results that looks like this
 
         "1 year, 2 months, 4 hours, 5 minutes, and 6 seconds"
+        
+There is also [time-lord](https://github.com/krainboltgreene/time-lord) if you want to look around
+
+```ruby
+require 'time-lord'
+1.hour.ago.to_i                     #=> -3600
+200.minutes.ago.to_words            #=> "3 hours ago"
+(200.years + 400.days).ago.to_words #=> "201 years ago"
+1.hour.ago.to_range                 #=> 1379701707..1379705307
+```
 
 ### Related: Natural Language Date Parser
 
