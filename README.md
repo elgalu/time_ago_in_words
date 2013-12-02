@@ -50,15 +50,17 @@ time_ago_in_words(Time.now - 2.hours) + ' ago'
 
 If you are programming for the web and don't want to mess your caching strategies then client-side update libraries came to your rescue:
 
-| Name           | jQuery library     | jQuery + Rails integration |
-|:-------------- |:------------------:|:--------------------------:|
-| Smart Time Ago | [smart-time-ago][] | [timeago-rails][]          |
-| Timeago        | [jquery-timeago][] | [rails-timeago][]          |
+| Name                 | Pure Javascript + Rails integration | jQuery library     | jQuery + Rails integration |
+|:-------------------- |:-----------------------------------:|:------------------:|:--------------------------:|
+| 37signals Local Time | [local_time][]                      | [smart-time-ago][] | [timeago-rails][]          |
+| Smart Time Ago       |                                     | [smart-time-ago][] | [timeago-rails][]          |
+| Timeago              |                                     | [jquery-timeago][] | [rails-timeago][]          |
 
 [smart-time-ago]: https://github.com/pragmaticly/smart-time-ago
 [jquery-timeago]: https://github.com/rmm5t/jquery-timeago
 [timeago-rails]: https://github.com/ashchan/timeago-rails
 [rails-timeago]: https://github.com/jgraichen/rails-timeago
+[local_time]: https://github.com/37signals/local_time#time-ago-helper
 
 ### [dotiw](https://github.com/radar/dotiw)
 
