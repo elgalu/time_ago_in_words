@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = spec.summary
 
   spec.required_ruby_version     = '>= 1.9.2'
-  spec.required_rubygems_version = '>= 2'
+  spec.required_rubygems_version = '>= 1.8.25'
 
   spec.license       = 'MIT'
 
