@@ -1,11 +1,13 @@
-require 'simplecov'
-require 'coveralls'
+unless %w(jruby rbx).include? RUBY_ENGINE
+  require 'simplecov'
+  require 'coveralls'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start unless RUBY_PLATFORM == 'java'
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    SimpleCov::Formatter::HTMLFormatter,
+    Coveralls::SimpleCov::Formatter
+  ]
+  SimpleCov.start
+end
 
 # Internal
 require 'time_ago_in_words'
