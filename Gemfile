@@ -10,8 +10,9 @@ end
 
 unless %w(jruby rbx).include? RUBY_ENGINE
   group :test do
+    # Coverage reports only for MRI
     gem 'simplecov', '>= 0.8.2'
-    gem 'coveralls', '>= 0.7.0' # no need to run
+    gem 'coveralls', '>= 0.7.0'
   end
 
   group :development do
