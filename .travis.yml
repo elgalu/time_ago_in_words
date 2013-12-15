@@ -7,7 +7,7 @@ rvm:
   - rbx-2.2.1
 
 install:
-  - bundle install
+  - travis_retry bundle install
 
 script:
   - bundle exec rake
